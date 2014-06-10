@@ -17,7 +17,7 @@ Gem::Specification.new do |s|
   s.require_paths = ["lib"]
 
   s.add_runtime_dependency 'omniauth', '> 1.0'
-  s.add_runtime_dependency 'zendesk_api', '> 0.2.2'
+  s.add_runtime_dependency 'zendesk_api', '> 1.3.0'
 
   s.add_development_dependency 'rspec', '> 2.7'
   s.add_development_dependency 'rack-test'
