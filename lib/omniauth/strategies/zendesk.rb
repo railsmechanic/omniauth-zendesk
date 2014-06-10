@@ -16,13 +16,14 @@ module OmniAuth
           email:        identity.email,
           role:         identity.role,
           time_zone:    identity.time_zone,
-          description:  identity.respond_to?(:notes) ? identity.notes : nil,
+          description:  identity.notes,
           image:        identity.photo.respond_to?(:thumbnails) ? identity.photo.thumbnails.first.content_url : nil,
           phone:        identity.phone,
           site:         site
         }
       }
       credentials { { token: username, secret: password } }
+      extra { { raw_info: identity } }
 
       def request_phase
         if site && username && password
