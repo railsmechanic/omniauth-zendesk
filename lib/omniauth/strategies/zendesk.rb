@@ -6,7 +6,7 @@ module OmniAuth
       include OmniAuth::Strategy
 
       option :site, nil
-      option :params, { username: 'email', password: 'password' }
+      option :params, { username: 'username', password: 'password' }
       option :on_failed_registration, nil
 
       uid  { identity.email }
